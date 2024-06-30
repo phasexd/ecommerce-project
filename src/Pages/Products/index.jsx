@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const About = () => {
+const Products = () => {
   return (
    <>
     <div className="text-2xl font-bold pt-14">
-       welcome to about page
+       products and items
       </div>
       <div>
       <Link className='text-sm text-blue-600 underline' to={'/home'}>Back to Home</Link>
@@ -14,4 +14,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Products

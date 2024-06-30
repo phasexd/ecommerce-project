@@ -6,6 +6,7 @@ import About from "./Pages/About";
 
 import { AuthProvider } from "./Components/authContext";
 import { useRoutes } from "react-router-dom";
+import Products from "./Pages/Products";
 
 function App() {
   const routesArray = [
@@ -28,6 +29,10 @@ function App() {
     {
       path: "/about",
       element: <About />,
+    },
+    {
+      path: "/products",
+      element: <Products />,
     },
   ];
 

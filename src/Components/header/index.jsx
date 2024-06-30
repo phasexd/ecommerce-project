@@ -7,12 +7,15 @@ const Header = () => {
     const navigate = useNavigate()
     const { userLoggedIn } = useAuth()
     return (
-        <nav className='flex flex-row gap-x-2 w-full z-20 fixed top-0 left-0 h-12 border-b place-content-center items-center bg-gray-200'>
+        <nav className='flex flex-row gap-x-2 w-full z-20 fixed top-0 left-0 h-12 border-b place-content-end items-center bg-gray-200 pr-4 font-bold'>
             {
                 userLoggedIn
                     ?
                     <>
-                        <button onClick={() => { doSignOut().then(() => { navigate('/login') }) }} className='text-sm text-blue-600 underline'>Logout</button>
+                    <Link className='text-ls text-black-300 pr-4' to={'/products'}>Products</Link>
+                    <Link className='text-ls text-black-300 pr-4' to={'/about'}>About</Link>
+                        <button onClick={() => { doSignOut().then(() => { navigate('/login') }) }} className='text-ls text-black-300 right-0 bg-slate-50 border-black border-2 rounded-3xl p-1 w-20'>Logout</button>
+                        
                     </>
                     :
                     <>
